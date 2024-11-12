@@ -1,0 +1,11 @@
+from django.db import models
+
+# Create your models here.
+class City(models.Model):
+    name = models.CharField(max_length=100)
+    temperature = models.FloatField(null=True, blank=True)
+    humidity = models.FloatField(null=True, blank=True)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
